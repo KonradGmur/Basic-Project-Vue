@@ -12,6 +12,9 @@
       <p v-else>{{counterMultiply}}</p>
       <button @click="increaseCounter">+</button>
       <button @click="decreaseCounter">-</button>
+      <ul>
+        <li v-for="user in users">{{user.name}}</li>
+      </ul>
     </div>
 
     <script>
@@ -20,6 +23,7 @@
         data: {
           title: "Hello Vue",
           counter: 0,
+          users: [{ name: "Adam" }, { name: "Konrad" }],
         },
         computed: {
           counterMultiply() {
